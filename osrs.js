@@ -32,7 +32,15 @@ import("node-fetch").then((fetchModule) => {
         const dataArray = Object.values(dataObject);
 
         if (dataArray.length > 0) {
-          exportDataToCSV(dataArray, "1h_item_prices");
+          // Extract the item data from the object and include the ID
+          const formattedData = Object.entries(dataObject).map(
+            ([id, values]) => ({
+              id,
+              ...values,
+            })
+          );
+
+          exportDataToCSV(formattedData, "1h_item_prices");
         } else {
           console.error("No valid data received for hourly item data.");
         }
@@ -56,7 +64,15 @@ import("node-fetch").then((fetchModule) => {
         const dataArray = Object.values(dataObject);
 
         if (dataArray.length > 0) {
-          exportDataToCSV(dataArray, "latest_item_prices");
+          // Extract the item data from the object and include the ID
+          const formattedData = Object.entries(dataObject).map(
+            ([id, values]) => ({
+              id,
+              ...values,
+            })
+          );
+
+          exportDataToCSV(formattedData, "latest_item_prices");
         } else {
           console.error("No valid data received for latest item data.");
         }
