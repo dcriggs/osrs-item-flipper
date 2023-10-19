@@ -1,0 +1,24 @@
+{
+  "name": "osrs-item-flipper",
+  "version": "1.0.0",
+  "description": "Automated OSRS item data retrieval and analysis tool for in-game item flipping strategies.",
+  "main": "osrs.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dcriggs/osrs-item-flipper.git"
+  },
+  "author": "dcriggs",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dcriggs/osrs-item-flipper/issues"
+  },
+  "homepage": "https://github.com/dcriggs/osrs-item-flipper#readme",
+  "dependencies": {
+    "csv-writer": "^1.6.0",
+    "fs": "^0.0.1-security",
+    "node-fetch": "^3.3.2"
+  }
+}
