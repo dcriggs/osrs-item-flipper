@@ -1,2 +1,2 @@
 # osrs-item-flipper
-Automated OSRS item data retrieval and analysis tool for in-game item flipping strategies.
+The "OSRS Item Flipper" is a Node.js application that automates the collection of real-time item pricing and market data from Old School RuneScape (OSRS). It allows users to schedule regular data pulls, store the information in CSV files or a cloud-based storage service like Google Drive, and perform data processing, analysis, and alerting. This tool empowers OSRS players and traders to make informed decisions in the game's dynamic market.
