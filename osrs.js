@@ -110,12 +110,19 @@ import("node-fetch").then((fetchModule) => {
     const csvFilename = `./exports/${prefix}_${timestamp}.csv`;
 
     // Create the CSV writer with dynamic headers based on the first item
+    const header = Object.keys(firstItem).map((header) => ({
+      id: header,
+      title: header,
+    }));
+
+    // Check if you're fetching from the 'mapping' API
+    if (prefix.includes("item_mapping")) {
+      header.push({ id: "limit", title: "limit" });
+    }
+
     const csvWriter = createCsvWriter({
       path: csvFilename,
-      header: Object.keys(firstItem).map((header) => ({
-        id: header,
-        title: header,
-      })),
+      header: header,
     });
 
     // Log headers
